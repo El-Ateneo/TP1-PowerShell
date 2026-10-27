@@ -13,7 +13,7 @@ Get-ExecutionPolicy
 
 # 3. Informacion del sistema operativo
 Write-Host "`n===== INFORMACION DEL SISTEMA OPERATIVO ====="
-Get-ComputerInfo | Select-Object WindowsProductName, WindowsEditionId, WindowsVersion, OsBuildNumber, OsArchitecture
+Get-CimInstance Win32_OperatingSystem | Select-Object Caption, Version, BuildNumber, OSArchitecture
 
 # 4. Informacion completa de la PC mediante CMD
 Write-Host "`n===== INFORMACION COMPLETA DE LA PC ====="
