@@ -1,2 +1,2 @@
-# TP1-PowerShell
-Trabajo Práctico 1 de PowerShell - Programación para Seguridad Informática.
+# TP-PowerShell
+Trabajos Prácticos de PowerShell - Programación para Seguridad Informática.
