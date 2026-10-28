@@ -1,14 +1,13 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TP1 - PowerShell</title>
+    <title>Trabajos Prácticos - Programación para Seguridad Informática</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            max-width: 800px;
+            max-width: 850px;
             margin: 40px auto;
             padding: 20px;
             background: #f3f6fa;
@@ -18,78 +17,161 @@
 
         main {
             background: white;
-            padding: 28px;
+            padding: 32px;
             border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        header {
+            margin-bottom: 25px;
+            border-bottom: 2px solid #eef2f7;
+            padding-bottom: 15px;
         }
 
         h1 {
             color: #1769aa;
+            margin-bottom: 8px;
+        }
+
+        h2 {
+            color: #2c3e50;
+            border-bottom: 1px solid #eef2f7;
+            padding-bottom: 6px;
+            margin-top: 25px;
+        }
+
+        h3 {
+            color: #1769aa;
+            margin-bottom: 8px;
+        }
+
+        .tp-card {
+            background: #fafbfc;
+            border: 1px solid #e1e7ef;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 25px;
         }
 
         a {
             color: #1769aa;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .links-container {
+            margin: 12px 0;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
         }
 
         code {
             background: #eef2f7;
-            padding: 3px 6px;
+            padding: 2px 6px;
             border-radius: 4px;
+            font-family: Consolas, monospace;
+            color: #0f4c81;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 6px;
         }
 
         footer {
-            margin-top: 28px;
+            margin-top: 30px;
             padding-top: 15px;
             border-top: 1px solid #ddd;
             color: #64748b;
             font-size: 14px;
+            text-align: center;
         }
     </style>
 </head>
 <body>
     <main>
-        <h1>Trabajo Práctico N.º 1: PowerShell</h1>
+        <header>
+            <h1>Portafolio de Trabajos Prácticos</h1>
+            <p><strong>Módulo:</strong> Programación para Seguridad Informática</p>
+            <p><strong>Docente:</strong> Lic. y Prof. Carlos Pacheco</p>
+            <p><strong>Alumno:</strong> Frias Alejandro Miguel</p>
+        </header>
 
-        <p><strong>Módulo:</strong> Programación para Seguridad Informática</p>
-        <p><strong>Docente:</strong> Lic. y Prof. Carlos Pacheco</p>
+        <h2>Entregas de la Cátedra</h2>
 
-        <h2>Objetivo</h2>
-        <p>
-            Desarrollar un script en PowerShell para consultar la versión
-            de PowerShell, la política de ejecución, la información del
-            sistema operativo y los datos generales de la computadora
-            mediante el comando systeminfo.
-        </p>
+        <!-- TRABAJO PRÁCTICO 1 -->
+        <article class="tp-card">
+            <h3>Trabajo Práctico N.º 1: Información del Sistema en PowerShell</h3>
+            
+            <p>
+                <strong>Objetivo:</strong> Desarrollar un script en PowerShell para consultar la versión
+                del entorno, la política de ejecución activa, la información del sistema operativo y los datos
+                generales del hardware mediante la utilidad de sistema.
+            </p>
 
-        <h2>Archivo del trabajo</h2>
-        <p>
-            El script desarrollado para este trabajo práctico se encuentra
-            disponible en el repositorio de GitHub.
-        </p>
+            <div class="links-container">
+                <a href="./TP1-PowerShell.ps1">📄 Ver script TP1-PowerShell.ps1</a>
+                <a href="https://github.com/El-Ateneo/TP1-PowerShell" target="_blank" rel="noopener noreferrer">🌐 Repositorio TP1 en GitHub</a>
+            </div>
 
-        <p>
-            <a href="./TP1-PowerShell.ps1">
-                Consultar o descargar el script TP1-PowerShell.ps1
-            </a>
-        </p>
+            <h4>Comandos y variables utilizados:</h4>
+            <ul>
+                <li><code>$PSVersionTable</code>: Información general del entorno PowerShell.</li>
+                <li><code>$PSVersionTable.PSVersion</code>: Muestra la versión específica instalada.</li>
+                <li><code>Get-ExecutionPolicy</code>: Consulta la política de ejecución de scripts activa.</li>
+                <li><code>Get-CimInstance Win32_OperatingSystem</code>: Consulta información del sistema operativo.</li>
+                <li><code>cmd.exe /c systeminfo</code>: Ejecuta el reporte detallado del equipo desde CMD.</li>
+            </ul>
+        </article>
 
-        <p>
-            <a href="https://github.com/El-Ateneo/TP1-PowerShell"
-               target="_blank" rel="noopener noreferrer">
-                Ver repositorio en GitHub
-            </a>
-        </p>
+        <!-- TRABAJO PRÁCTICO 2 -->
+        <article class="tp-card">
+            <h3>Trabajo Práctico N.º 2: Variables, Entradas y Salidas</h3>
+            
+            <p>
+                <strong>Objetivo:</strong> Implementar captura de datos del usuario por consola para generar un saludo interactivo y calcular el salario a cobrar en función de horas trabajadas y tarifa horaria.
+            </p>
 
-        <h2>Comandos utilizados</h2>
-        <ul>
-            <li><code>$PSVersionTable</code>: información de PowerShell.</li>
-            <li><code>$PSVersionTable.PSVersion</code>: versión instalada.</li>
-            <li><code>Get-ExecutionPolicy</code>: política de ejecución actual.</li>
-            <li><code>Get-CimInstance Win32_OperatingSystem</code>: información del sistema operativo.</li>
-            <li><code>cmd.exe /c systeminfo</code>: información general del equipo mediante CMD.</li>
-        </ul>
+            <div class="links-container">
+                <a href="./TP2-PowerShell.ps1">📄 Ver script TP2-PowerShell.ps1</a>
+                <a href="https://github.com/El-Ateneo/TP2-PowerShell" target="_blank" rel="noopener noreferrer">🌐 Repositorio TP2 en GitHub</a>
+            </div>
+
+            <h4>Comandos y sintaxis utilizados:</h4>
+            <ul>
+                <li><code>Read-Host</code>: Solicita y captura la entrada ingresada por el usuario desde la consola.</li>
+                <li><code>Write-Host</code>: Imprime en pantalla las cadenas y el resultado de las variables procesadas.</li>
+                <li><code>[double]</code>: Casting de tipo de dato para permitir valores numéricos decimales en el cálculo.</li>
+                <li><code>$variable = valor</code>: Definición e inicialización implícita de variables en memoria.</li>
+                <li><code>$horas * $costoHora</code>: Operador aritmético de multiplicación para procesar la paga total.</li>
+            </ul>
+        </article>
+
+        <!-- PLANTILLA PARA PRÓXIMOS TRABAJOS (Copiar y pegar este bloque cuando haya un TP3)
+        <article class="tp-card">
+            <h3>Trabajo Práctico N.º 3: [Título del TP]</h3>
+            <p><strong>Objetivo:</strong> [Descripción breve del objetivo].</p>
+            <div class="links-container">
+                <a href="./TP3-PowerShell.ps1">📄 Ver script TP3-PowerShell.ps1</a>
+                <a href="https://github.com/TU_USUARIO/TP3-PowerShell" target="_blank" rel="noopener noreferrer">🌐 Repositorio TP3 en GitHub</a>
+            </div>
+            <h4>Comandos utilizados:</h4>
+            <ul>
+                <li><code>Comando</code>: Descripción.</li>
+            </ul>
+        </article>
+        -->
 
         <footer>
-            Trabajo práctico académico — Programación para Seguridad Informática.
+            Trabajos prácticos académicos — Programación para Seguridad Informática.
         </footer>
     </main>
 </body>
