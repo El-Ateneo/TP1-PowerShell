@@ -154,20 +154,37 @@
             </ul>
         </article>
 
-        <!-- PLANTILLA PARA PRÓXIMOS TRABAJOS (Copiar y pegar este bloque cuando haya un TP3)
+
+        
+        <!-- TRABAJO PRÁCTICO 3 -->
         <article class="tp-card">
-            <h3>Trabajo Práctico N.º 3: [Título del TP]</h3>
-            <p><strong>Objetivo:</strong> [Descripción breve del objetivo].</p>
+            <h3>Trabajo Práctico N.º 3: Estructuras de Control y Repetitivas</h3>
+
+            <p>
+                <strong>Objetivo:</strong> Desarrollar un script en PowerShell que permita
+                solicitar un número límite al usuario, identificando si cada número es par o impar. Además, incorporar el cmdlet
+                <code>Get-Date</code> para mostrar la hora de cada iteración y utilizar
+                diferentes colores para distinguir los resultados en consola.
+            </p>
+
             <div class="links-container">
                 <a href="./TP3-PowerShell.ps1">📄 Ver script TP3-PowerShell.ps1</a>
-                <a href="https://github.com/TU_USUARIO/TP3-PowerShell" target="_blank" rel="noopener noreferrer">🌐 Repositorio TP3 en GitHub</a>
             </div>
-            <h4>Comandos utilizados:</h4>
+
+            <h4>Estructuras, comandos y operadores utilizados:</h4>
             <ul>
-                <li><code>Comando</code>: Descripción.</li>
+                <li><code>Read-Host</code>: Solicita al usuario el número límite para realizar el conteo.</li>
+                <li><code>for</code>: Ejecuta el ciclo repetitivo desde 1 hasta el número ingresado.</li>
+                <li><code>if-else</code>: Permite determinar si cada número es par o impar.</li>
+                <li><code>%</code>: Obtiene el resto de la división para identificar números pares e impares.</li>
+                <li><code>-eq</code>: Compara si el resto de la división es igual a cero.</li>
+                <li><code>-le</code>: Establece la condición para continuar el ciclo mientras el contador sea menor o igual al límite.</li>
+                <li><code>Get-Date</code>: Obtiene la hora actual en cada iteración.</li>
+                <li><code>Write-Host</code>: Muestra los resultados en consola.</li>
+                <li><code>-ForegroundColor</code>: Permite diferenciar visualmente los números pares (verde) e impares (amarillo).</li>
             </ul>
         </article>
-        -->
+        
 
         <footer>
             Trabajos prácticos académicos — Programación para Seguridad Informática.
